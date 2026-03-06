@@ -22,7 +22,7 @@ int GetCard()
 	return Cards;
 }
 
-void RandomCard() 
+void RandomCard()
 {
 	srand(time(NULL));
 
@@ -46,33 +46,33 @@ void PrintWinner()
 	cout << "ªÛ¥Î ƒ´µÂ «’: " << ComSum << endl;
 	cout << "≥ª ƒ´µÂ «’: " << UserSum << endl;;
 
-		if (UserSum >= 21)
-		{
-			// Com¿Ã ¿Ã±Ë
-			cout << "ªÛ¥Î∞° ¿Ã∞ÂΩ¿¥œ¥Ÿ." << endl;
-			
-		}
-		else if (UserSum == ComSum)
+	if (UserSum >= 21)
+	{
+		// Com¿Ã ¿Ã±Ë
+		cout << "ªÛ¥Î∞° ¿Ã∞ÂΩ¿¥œ¥Ÿ." << endl;
+
+	}
+	else if (UserSum == ComSum)
+	{
+		// User∞° ¿Ã±Ë
+		cout << "Ω¬∏Æ«œºÃΩ¿¥œ¥Ÿ." << endl;
+	}
+	else if (UserSum < 21 && ComSum < 21)
+	{
+		if (UserSum > ComSum)
 		{
 			// User∞° ¿Ã±Ë
 			cout << "Ω¬∏Æ«œºÃΩ¿¥œ¥Ÿ." << endl;
 		}
-		else if(UserSum < 21 && ComSum < 21)
+		else
 		{
-			if (UserSum > ComSum)
-			{
-				// User∞° ¿Ã±Ë
-				cout << "Ω¬∏Æ«œºÃΩ¿¥œ¥Ÿ." << endl;
-			}
-			else
-			{
-				// Com¿Ã ¿Ã±Ë
-				cout << "ªÛ¥Î∞° ¿Ã∞ÂΩ¿¥œ¥Ÿ." << endl;
-			}
+			// Com¿Ã ¿Ã±Ë
+			cout << "ªÛ¥Î∞° ¿Ã∞ÂΩ¿¥œ¥Ÿ." << endl;
 		}
+	}
 }
 
-int main() 
+int main()
 {
 	srand(time(NULL));
 
